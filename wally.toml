@@ -1,0 +1,13 @@
+[package]
+name = "dialoguemaker/use-maximum-distance"
+version = "0.1.0-patch-1"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+repository = "https://github.com/DialogueMaker/use-maximum-distance"
+authors = ["Christian Toney <christian.toney@beastslash.com>"]
+include = ["src", "src/**/*.lua", "wally.toml", "default.project.json"]
+exclude = ["**"]
+
+[dependencies]
+react = "jsdotlua/react@17.2.1"
+dialogue-server-types = "dialoguemaker/dialogue-server-types@0.1.0-patch-1"
