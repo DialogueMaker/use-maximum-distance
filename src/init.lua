@@ -2,8 +2,8 @@
 
 local Players = game:GetService("Players");
 
-local React = require(script.Parent.react);
-local IDialogueServer = require(script.Parent["dialogue-server-types"]);
+local React = require("@pkg/react");
+local IDialogueServer = require("@pkg/dialogue_server_types");
 
 type DialogueServer = IDialogueServer.DialogueServer;
 
