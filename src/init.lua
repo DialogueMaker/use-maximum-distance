@@ -2,8 +2,9 @@
 
 local Players = game:GetService("Players");
 
-local React = require("@pkg/react");
-local IDialogueServer = require("@pkg/dialogue_server_types");
+local packages = script.Parent.roblox_packages;
+local React = require(packages.react);
+local IDialogueServer = require(packages.dialogue_server_types);
 
 type DialogueServer = IDialogueServer.DialogueServer;
 
