@@ -4,15 +4,15 @@ local Players = game:GetService("Players");
 
 local packages = script.Parent.roblox_packages;
 local React = require(packages.react);
-local IDialogueServer = require(packages.dialogue_server_types);
+local IConversation = require(packages.conversation_types);
 
-type DialogueServer = IDialogueServer.DialogueServer;
+type Conversation = IConversation.Conversation;
 
-local function useMaximumDistance(npc: Model, dialogueServer: DialogueServer, endConversation: () -> ())
+local function useMaximumDistance(npc: Model, conversation: Conversation, endConversation: () -> ())
 
   React.useEffect(function(): ()
     
-    local distanceSettings = dialogueServer:getSettings().distance;
+    local distanceSettings = conversation:getSettings().distance;
     if distanceSettings.maxConversationDistance and distanceSettings.relativePart then
 
       local detectionTask = task.spawn(function() 
@@ -38,7 +38,7 @@ local function useMaximumDistance(npc: Model, dialogueServer: DialogueServer, en
 
     end;
 
-  end, {npc :: unknown, dialogueServer, endConversation});
+  end, {npc :: unknown, conversation, endConversation});
 
 end;
 
